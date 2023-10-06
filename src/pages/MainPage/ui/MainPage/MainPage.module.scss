@@ -1,0 +1,10 @@
+.Page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pageContent {
+  height: 100%;
+  flex-grow: 1;
+}
