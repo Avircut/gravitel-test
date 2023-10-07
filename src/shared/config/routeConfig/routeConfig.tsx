@@ -9,13 +9,13 @@ export type AppRoutesProps = RouteProps & {
 
 export enum AppRoutes {
   DASHBOARD = 'dashboard',
-  AUTH = 'auth',
+  LOGIN = 'login',
   NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.DASHBOARD]: '/dashboard',
-  [AppRoutes.AUTH]: '/auth',
+  [AppRoutes.LOGIN]: '/login',
   [AppRoutes.NOT_FOUND]: '*',
 };
 
@@ -25,8 +25,8 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     element: <MainPage />,
     restriction: 'auth',
   },
-  [AppRoutes.AUTH]: {
-    path: RoutePath.auth,
+  [AppRoutes.LOGIN]: {
+    path: RoutePath.login,
     element: <AuthPage />,
     restriction: 'anon',
   },

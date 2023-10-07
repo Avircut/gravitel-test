@@ -7,5 +7,6 @@ export const darkTheme = responsiveFontSizes(
       primary: orange,
       secondary: deepPurple,
     },
+    spacing: 4,
   }),
 );

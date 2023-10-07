@@ -1,6 +1,6 @@
 import { memo, useCallback } from 'react';
 import {
-  Stack, IconButton, AppBar, Divider, Container,
+  Stack, IconButton, AppBar, Divider, Container, Typography,
 } from '@mui/material';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useReactiveVar } from '@apollo/client';
@@ -18,7 +18,8 @@ export const Navbar = memo(() => {
     return (
       <AppBar position="static">
         <Container maxWidth="lg">
-          <Stack direction="row" justifyContent="end" alignItems="center">
+          <Stack direction="row" justifyContent="space-between" alignItems="center">
+            <Typography>Сводка</Typography>
             <IconButton onClick={onLogout} className={cls.icon}>
               <LogoutIcon />
             </IconButton>
