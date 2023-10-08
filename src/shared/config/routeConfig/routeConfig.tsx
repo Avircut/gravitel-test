@@ -1,5 +1,5 @@
 import AuthPage from 'pages/AuthPage/ui/AuthPage/AuthPage';
-import { MainPage } from 'pages/MainPage';
+import { DashboardPage } from 'pages/DashboardPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import { RouteProps } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ export const RoutePath: Record<AppRoutes, string> = {
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.DASHBOARD]: {
     path: RoutePath.dashboard,
-    element: <MainPage />,
+    element: <DashboardPage />,
     restriction: 'auth',
   },
   [AppRoutes.LOGIN]: {
@@ -32,6 +32,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   },
   [AppRoutes.NOT_FOUND]: {
     path: RoutePath.not_found,
-    element: <NotFoundPage />,
+    element: <DashboardPage />,
+    restriction: 'auth',
   },
 };

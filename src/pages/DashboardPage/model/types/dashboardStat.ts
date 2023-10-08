@@ -5,8 +5,11 @@ export type DashboardStat = {
   lists: Statistic;
   dialogs: Statistic;
 }
-export const DashboardTranslate:Record<keyof DashboardStat, string> = {
+export const DashboardTranslate:Record<keyof DashboardStat | keyof Statistic, string> = {
   scenarios: 'Сценарии',
   lists: 'Списки',
   dialogs: 'Диалоги',
+  active: 'Активных',
+  inactive: 'Неактивных',
+  completed: 'Завершенных',
 };

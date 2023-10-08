@@ -56,24 +56,29 @@ const AuthPage = memo(() => {
       </Typography>
       <Box component="form" onSubmit={handleSubmit(onSubmit)} sx={{ mt: 1 }}>
         <ControlledTextField
+          variant="outlined"
           required
           type="text"
           name="username"
           control={control}
           label="Логин"
+          id="login"
         />
         <ControlledTextField
+          variant="outlined"
           required
           type="password"
           name="password"
           control={control}
           label="Пароль"
+          id="password"
         />
         <Button
           type="submit"
           fullWidth
           variant="contained"
           disabled={loading}
+          id="submit"
           sx={{ mt: 3, mb: 2 }}
         >
           Войти

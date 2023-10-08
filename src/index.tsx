@@ -5,14 +5,14 @@ import 'app/styles/index.scss';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { StoreProvider } from 'app/providers/StoreProvider';
 import { ThemeProvider } from '@mui/material/styles';
-import { darkTheme } from 'app/providers/theme/theme';
+import { mainTheme } from 'app/providers/theme/theme';
 import { CssBaseline } from '@mui/material';
 
 render(
   <BrowserRouter>
     <StoreProvider>
       <ErrorBoundary>
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider theme={mainTheme}>
           <CssBaseline />
           <App />
         </ThemeProvider>

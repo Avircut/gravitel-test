@@ -1,12 +1,12 @@
-import { memo, useCallback } from 'react';
+import { memo } from 'react';
 import {
-  Stack, CircularProgress, Grid, Box,
+  Stack, CircularProgress, Box,
 } from '@mui/material';
 import { PageError } from 'widgets/PageError';
 import { useQuery } from '@apollo/client';
 import { DashboardStat } from '../../model/types/dashboardStat';
 import { GET_DASHBOARD } from '../../model/services/getDashboard';
-import cls from './MainPage.module.scss';
+import cls from './DashboardPage.module.scss';
 import { DashboardItem } from '../DashboardItem/DashboardItem';
 
 const MainPage = memo(() => {
@@ -28,6 +28,7 @@ const MainPage = memo(() => {
   }
   return (
     <Box
+      id="dashboardPage"
       className={cls.pageContent}
       maxWidth="lg"
       gap={8}

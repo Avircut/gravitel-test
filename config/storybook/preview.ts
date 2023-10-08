@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import type { Preview } from '@storybook/react';
 import { initialize, mswLoader } from 'msw-storybook-addon';
-import { darkTheme } from 'app/providers/theme/theme';
+import { mainTheme } from 'app/providers/theme/theme';
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator/StoreDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/decorators/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/decorators/ThemeDecorator/ThemeDecorator';
@@ -12,7 +12,7 @@ initialize({ onUnhandledRequest: 'bypass' });
 
 const preview: Preview = {
   decorators: [
-    RouterDecorator, StyleDecorator, ThemeDecorator(darkTheme), StoreDecorator(),
+    RouterDecorator, StyleDecorator, ThemeDecorator(mainTheme), StoreDecorator(),
   ],
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },

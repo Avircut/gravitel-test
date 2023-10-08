@@ -4,7 +4,7 @@ export const GET_DASHBOARD = gql`
   fragment statisticFields on Statistic{
     active, completed, inactive
   }
-  query{
+  query GetDashboard{
     dashboard{
       scenarios{...statisticFields},
       lists{...statisticFields},

@@ -14,7 +14,3 @@ export const Normal: Story = {
   args: {
   },
 };
-export const Dark: Story = {
-  args: {
-  },
-};

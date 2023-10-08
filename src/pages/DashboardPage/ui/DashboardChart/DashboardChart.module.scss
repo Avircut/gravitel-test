@@ -1,0 +1,17 @@
+.chartWrapper {
+  position: relative;
+}
+
+.chartText {
+  position: absolute;
+  pointer-events: none;
+  height: 35%;
+}
+
+.chartTitle {
+  font-weight: 500;
+}
+
+.chartNumber {
+  font-weight: 600;
+}
